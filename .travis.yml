@@ -2,7 +2,27 @@ language: node_js
 node_js:
   - "8"
 
+install:
+  - pip install awscli
+  - npm install
+
 # Disabling e2e tests for now pending sauce labs setup
 script:
   - npm run unit
   - npm build
+
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: www.seattlehumanekennelhub.org
+  skip_cleanup: true
+  region: us-west-1
+  local_dir: dist
+
+after_deploy:
+  # Not sure if this is still necessary, trying without
+  # - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
