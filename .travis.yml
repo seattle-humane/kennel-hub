@@ -1,13 +1,19 @@
 language: python
-node_js:
-  - "8"
 python:
   - "3.6"
+env:
+  - NODE_VERSION="8"
 
 cache:
   pip: true
   directories:
     - ./node_modules
+
+before_install:
+  - nvm --version
+  - nvm install $NODE_VERSION
+  - node --version
+  - npm --version
 
 install:
   - pip install awscli
@@ -26,7 +32,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: www.seattlehumanekennelhub.org
   skip_cleanup: true
-  region: us-west-1
+  region: us-west-2
   local_dir: dist
 
 after_deploy:
