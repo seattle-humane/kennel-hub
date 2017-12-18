@@ -2,6 +2,8 @@
 
 > Frontend for Seattle Humane's animal activity log
 
+See [animal-status](https://github.com/seattle-humane/animal-status) for the backend.
+
 ## Build Setup
 
 ``` bash
