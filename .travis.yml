@@ -9,7 +9,7 @@ install:
 # Disabling e2e tests for now pending sauce labs setup
 script:
   - npm run unit
-  - npm build
+  - npm run build
 
 deploy:
   on:
