@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/seattle-humane-logo-color-249x110.jpg">
     <router-view/>
   </div>
 </template>
