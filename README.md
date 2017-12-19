@@ -1,9 +1,9 @@
-# kennel-hub
+# Seattle Humane Kennel Hub
 [![Build Status](https://travis-ci.org/seattle-humane/kennel-hub.svg?branch=master)](https://travis-ci.org/seattle-humane/kennel-hub)
 
-> Frontend for Seattle Humane's animal activity log
+https://seattlehumanekennelhub.org, a web app for Seattle Humane's Dog Behavior and Socialization volunteers to manage taking dogs out for walks/training/etc.
 
-See [animal-status](https://github.com/seattle-humane/animal-status) for the backend.
+This repo contains the frontend (a Vue SPA) - see [animal-status](https://github.com/seattle-humane/animal-status) for the backend.
 
 ## Build
 
