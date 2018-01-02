@@ -1,7 +1,7 @@
 <template>
-  <form class="form-inline">
+  <form class="form-inline form-inline-flex bg-light">
     <button
-      class="btn btn-outline-success"
+      class="btn btn-light"
       type="button"
       v-for="behaviorLevel in behaviorLevels"
       :key="behaviorLevel">
@@ -22,9 +22,12 @@
 </script>
 
 <style scoped>
-ul {
-  list-style: none;
-  display: flex;
-  background: rgb(219, 57, 46);
+.form-inline-flex {
+  padding: 6px 0 6px 0;
+  display: inline-flex;
+
+}
+button {
+  margin: 8px;
 }
 </style>
