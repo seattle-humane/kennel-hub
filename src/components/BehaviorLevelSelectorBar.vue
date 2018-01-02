@@ -1,11 +1,13 @@
 <template>
-  <ul class="behavior-level-selector-bar">
-    <li
+  <form class="form-inline">
+    <button
+      class="btn btn-outline-success"
+      type="button"
       v-for="behaviorLevel in behaviorLevels"
       :key="behaviorLevel">
       {{ behaviorLevel }}
-    </li>
-  </ul>
+    </button>
+  </form>
 </template>
 
 <script>
@@ -20,5 +22,9 @@
 </script>
 
 <style scoped>
-
+ul {
+  list-style: none;
+  display: flex;
+  background: rgb(219, 57, 46);
+}
 </style>
