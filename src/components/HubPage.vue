@@ -2,10 +2,16 @@
   <div class="hub-page-container">
     <behavior-level-selector-bar />
     <div class="lists-container">
-      <animal-selector-list
-        :animals="takingOutCandidateAnimals"/>
-      <animal-selector-list
-        :animals="doneWithCandidateAnimals"/>
+      <div class="taking-out-container">
+        <h2>Taking out...</h2>
+        <animal-selector-list
+          :animals="takingOutCandidateAnimals"/>
+      </div>
+      <div class="done-with-container">
+        <h2>Done with...</h2>
+        <animal-selector-list
+          :animals="doneWithCandidateAnimals"/>
+      </div>
     </div>
   </div>
 </template>
@@ -36,5 +42,8 @@
 </script>
 
 <style scoped>
-
+.lists-container {
+  display: flex;
+  justify-content: space-around;
+}
 </style>

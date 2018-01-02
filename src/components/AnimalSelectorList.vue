@@ -22,5 +22,8 @@
 </script>
 
 <style scoped>
-
+ul {
+  list-style: none;
+  text-indent: 0;
+}
 </style>
