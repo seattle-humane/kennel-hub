@@ -5,12 +5,14 @@
       <div class="taking-out-container">
         <h2>Taking out...</h2>
         <animal-selector-list
-          :animals="takingOutCandidateAnimals"/>
+          :animals="takingOutCandidateAnimals"
+          @select="$router.push('/taking-out/' + $event.target.id)"/>
       </div>
       <div class="done-with-container">
         <h2>Done with...</h2>
         <animal-selector-list
-          :animals="doneWithCandidateAnimals"/>
+          :animals="doneWithCandidateAnimals"
+          @select="$router.push('/done-with/' + $event.target.id)"/>
       </div>
     </div>
   </div>
