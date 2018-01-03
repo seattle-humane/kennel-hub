@@ -1,10 +1,10 @@
 <template>
-  <form class="form-inline form-inline-flex bg-light">
+  <form class="form-inline form-inline-flex bg-light" @submit.prevent>
     <button
-      class="btn btn-light"
-      type="button"
       v-for="behaviorLevel in behaviorLevels"
-      :key="behaviorLevel">
+      :key="behaviorLevel"
+      :class="['btn', (selected == behaviorLevel ? 'btn-primary' : 'btn-secondary')]"
+      @click="selected = behaviorLevel; $emit('select', behaviorLevel);">
       {{ behaviorLevel }}
     </button>
   </form>
@@ -15,7 +15,8 @@
     name: 'behavior-level-selector-bar',
     data: function () {
       return {
-        behaviorLevels: ['DBS 2', 'DBS 3', 'DBS 4', 'BPA', 'Staff', 'D-Staff']
+        selected: 'DBS 2',
+        behaviorLevels: ['DBS 2', 'DBS 3', 'DBS 4', 'BPA', 'Staff', 'BEH Staff']
       }
     }
   }
